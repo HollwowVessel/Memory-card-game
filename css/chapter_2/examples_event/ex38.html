@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css" id="theme">
+  <title>Пример 38 - Диапазон Range</title>
+</head>
+
+<body>
+
+  <p id="p">Текст: <i>курсивный текст</i> и <b>жирный текст</b></p>
+  <p id="result"></p>
+
+  <script>
+    let range = new Range();
+    // Каждый описанный метод представлен здесь:
+    let methods = {
+      // deleteContents() удалить содержимое диапазона из документа
+      deleteContents() {
+        range.deleteContents()
+      },
+      extractContents() {
+        // extractContents() удалить содержимое диапазона из документа и вернуть как DocumentFragment
+        let content = range.extractContents();
+        result.innerHTML = "";
+        result.append("Извлечено: ", content);
+      },
+      cloneContents() {
+        // cloneContents() склонировать содержимое диапазона и вернуть как DocumentFragment
+        let content = range.cloneContents();
+        result.innerHTML = "";
+        result.append("Клонировано: ", content);
+      },
+      insertNode() {
+        // insertNode(node) вставить node в документ в начале диапазона
+        let newNode = document.createElement('u');
+        newNode.innerHTML = "НОВЫЙ УЗЕЛ";
+        range.insertNode(newNode);
+      },
+      surroundContents() {
+        // surroundContents(node) обернуть node вокруг содержимого диапазона
+        let newNode = document.createElement('u');
+        try {
+          range.surroundContents(newNode);
+        } catch (e) { alert(e) }
+      },
+      resetExample() {
+        p.innerHTML = `Текст: <i>курсивный текст</i> и <b>жирный текст</b>`;
+        result.innerHTML = "";
+        //range.setStart(p.firstChild, 2);
+        //range.setEnd(p.querySelector('b').firstChild, 3);
+        range.setStart(p, 0);
+        range.setEnd(p, 4);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+      }
+    };
+    for (let method in methods) {
+      document.write(`<div><button onclick="methods.${method}()">${method}</button></div>`)
+    }
+    methods.resetExample();
+
+  </script>
+</body>
+
+</html>

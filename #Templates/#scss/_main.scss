@@ -1,0 +1,163 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #8ce1db;
+}
+
+
+.title{
+    margin-bottom: 50px;
+    font-size: 30px;
+
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.card{
+    cursor: pointer;
+    margin-right: 20px;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.front-face{
+    width: 200px;
+    height: 200px;
+    background: #bae4e1; 
+}
+.back-face{
+    width: 0px;
+    height: 0px;
+    background: #bae4e1;
+    
+
+}
+
+.show-front{
+    visibility: visible;
+}
+
+.show-back{
+    visibility: hidden;
+}
+
+
+.flip{
+    transform: rotateY(180deg);
+    .show-front{
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+    }
+    
+    .show-back{
+        width: 200px;
+        height: 200px;
+        visibility: visible;
+    }
+}
+
+.del{
+    cursor:auto;
+    .show-front{
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+    }
+    
+    .show-back{
+        width: 200px;
+        height: 200px;
+        visibility: hidden;
+    }
+}
+.score{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.harder{
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+
+@media screen and (max-width: 670px){
+   
+    .show-front{
+        width: 120px;
+        height: 120px;
+        visibility: visible;
+    }
+    .flip{
+        cursor:auto;
+        .show-front{
+            width: 0px;
+            height: 0px;
+            visibility: hidden;
+        }
+        
+        .show-back{
+            width: 120px;
+            height: 120px;
+            visibility: visible;
+        }
+    }
+}
+
+@media screen and (max-width: 430px){
+   
+    .show-front{
+        width: 60px;
+        height: 60px;
+        visibility: visible;
+    }
+    .flip{
+        cursor:auto;
+        .show-front{
+            width: 0px;
+            height: 0px;
+            visibility: hidden;
+        }
+        
+        .show-back{
+            width: 60px;
+            height: 60px;
+            visibility: visible;
+        }
+    }
+}
+
+@media screen and (max-width: 300px){
+   
+    .show-front{
+        width: 40px;
+        height: 40px;
+        visibility: visible;
+    }
+    .flip{
+        cursor:auto;
+        .show-front{
+            width: 0px;
+            height: 0px;
+            visibility: hidden;
+        }
+        
+        .show-back{
+            width: 40px;
+            height: 40px;
+            visibility: visible;
+        }
+    }
+}

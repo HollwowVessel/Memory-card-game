@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css" id="theme">
+  <title>Пример 17 - Раскрывающееся меню</title>
+</head>
+
+<body>
+
+  <script>
+    let data = {
+      "Овощи": {
+        "огурцы": 5,
+        "помидоры": 3
+      },
+      "Фрукты": {
+        "красные": {
+          "клубника": 2,
+          "малина": 4
+        },
+        "зеленые": {
+          "яблоко": 6,
+          "лайм": 2
+        }
+      }
+    }
+
+    function createTree(container, obj) {
+      document.querySelector(container).append(createUl(obj))
+    }
+
+    function createUl(obj) {
+      if(!Object.keys(obj).length) return
+      let ul = document.createElement('ul')
+      for(let key in obj) {
+        let li = document.createElement('li')
+
+        if(!isNaN(obj[key]))
+          li.textContent = key + ` ${obj[key]}`
+        else
+          li.textContent = key
+
+        let childrenUl = createUl(obj[key])
+        if(childrenUl) {
+          li.append(childrenUl)
+        }
+        ul.append(li)
+      }
+      return ul
+    }
+
+    createTree('body', data);
+
+    
+  </script>
+</body>
+
+</html>

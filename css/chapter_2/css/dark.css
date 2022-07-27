@@ -1,0 +1,13 @@
+body {
+  font-family: 'Calibri';
+  font-size: 20px;
+  background-color: rgb(9, 16, 22);
+  color: #ddd;
+}
+h4 {
+  font-size: 40px;
+}
+.container {
+  width: 500px;
+  margin: 0 auto;
+}

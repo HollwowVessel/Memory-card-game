@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css" id="theme">
+  <title>Пример 11 - Всплытие</title>
+</head>
+
+<body>
+
+  <div class="alert" onclick="alert('Клик')">
+    <p>Lorem ipsum <span style="background-color: green; color: black; padding: 3px;">dolor sit</span> amet.</p>
+  </div>
+  
+  <div onclick="alert('DIV 1')" style="border: 2px solid tomato; padding: 10px" class="block">
+    DIV 1
+    <div onclick="alert('DIV 2')" style="border: 2px solid tomato; padding: 10px">
+      DIV 2
+      <div onclick="alert('DIV 3')" style="border: 2px solid tomato; padding: 10px" class="stop">
+        DIV 3
+      </div>
+    </div>
+  </div>
+
+  <script>
+    
+  </script>
+</body>
+
+</html>

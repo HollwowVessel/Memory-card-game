@@ -1,0 +1,91 @@
+body {
+  font-family: "Calibri";
+  background-color: #eee;
+}
+.notification {
+  background-color: #fff;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.notification__header {
+  background-color: #bcd7e7;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+.notification__header img {
+  align-self: center;
+  max-width: 25px;
+}
+.notification__header h2 {
+  margin: 0;
+}
+.notification__info {
+  padding: 0 15px;
+  font-weight: bold;
+  color: red;
+  transition: 1s;
+  opacity: 0;
+}
+.notification__form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 15px;
+}
+.notification__form input {
+  height: 30px;
+  min-width: 75px;
+}
+.notification__form textarea {
+  resize: none;
+  margin: 0px 10px;
+  padding: 10px;
+  font-family: "Calibri";
+  width: 100%;
+  height: 70px;
+}
+.notification__form > button, .notification__list > button {
+  cursor: pointer;
+  margin: 0;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px 15px;
+  background-color: #bcd7e7;
+}
+.notification__form > button:hover, .notification__list > button:hover {
+  opacity: 0.9;
+}
+.notification__list {
+  padding: 15px;
+}
+.notification__item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.notification__warning {
+  background-color: #fff1d7;
+}
+button[data-time] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  background-color: #a01b1b;
+  color: white;
+  border: none;
+}
+button[data-time]:hover {
+  background-color: #e00f0f;
+}
+.notification__list h3 {
+  margin: 0 0 15px 0;
+}

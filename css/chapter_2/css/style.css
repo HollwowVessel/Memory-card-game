@@ -1,0 +1,195 @@
+* {
+  font-family: 'Calibri';
+}
+.menu_link, .btn, button, input[type="button"] {
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  background-color: #8dc5e6;
+  transition: 0.5s;
+  border: none;
+  outline: none;
+  
+}
+.menu_link:hover, .btn:hover, button:hover, input[type="button"]:hover {
+  opacity: 0.8;
+}
+.alert {
+  padding: 5px 15px;
+  border-radius: 4px;
+  color: #2e6926;
+  background-color: #bedd8d;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.item {
+  background-color: #c8c8c8;
+  margin-bottom: 10px;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+.item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.close {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 2px solid black;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.close:hover {
+  background-color: #000;
+  color: #fff;
+}
+.bgc {
+  background-color: #86d843;
+}
+.active {
+  border: 2px solid black;
+}
+.timer-progresbar {
+  display: flex;
+}
+.timer-progresbar > div {
+  padding: 5px;
+}
+.timer-progressbar__fill {
+  background-color: springgreen;
+}
+.timer-progressbar__empty, .invalid {
+  background-color: tomato;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+code {
+  background-color: #444;
+  color: #fff;
+  padding: 5px 25px;
+  border-radius: 5px;
+}
+kbd {
+  background-color: #222;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  line-height: 40px;
+}
+table {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+caption {
+  padding: 10px 0;
+  background-color: #fff6ce;
+  border: 1px solid black;
+  border-bottom: none;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+  font-size: 18px;
+}
+th {
+  font-weight: bold;
+  background-color: #fff6ce;
+}
+h4 {
+  text-transform: uppercase;
+}
+ul {
+  cursor: pointer;
+  list-style: none;
+  max-width: 320px;
+}
+li {
+  padding: 7px 14px;
+  color: white;
+  background-color: rgb(59, 115, 161);
+}
+#clock {
+  font-size: 50px;
+  font-family: monospace;
+  font-weight: bold;
+}
+.tooltip {
+  position: fixed;
+  padding: 15px;
+  border: 2px dashed #b3c9ce;
+  border-radius: 4px;
+  text-align: center;
+  color: #333;
+  background: #fff;
+}
+.slider {
+  width: 300px;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+.slider__btn {
+  cursor: pointer;
+  background-color: dodgerblue;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  left: 0px;
+  top: -5px;
+}
+#image {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0;
+}
+#image:focus {
+  outline: 3px dashed rgb(0, 0, 0);
+}
+#dark {
+  background-color: #333;
+  color: white;
+}
+/* Депозитный калькулятор */
+#dark table, td, tr, th {
+  text-align: left;
+  border: none;
+}
+#dark th {
+  background-color: transparent;
+
+}
+h1 {
+  text-align: center;
+}
+#diagram td {
+  vertical-align: bottom;
+  text-align: center;
+  padding: 10px;
+}
+#diagram div {
+  margin: auto;
+}
+#dark .d-flex {
+  height: 200px;
+}
+.d-flex {
+  display: flex;
+  align-items: center;
+}
